@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estado Matricula</title>
+        <link rel="stylesheet" href="/Style.css">
+        <link rel="stylesheet" href="/Navegacion.css">
+    </head>
+    <body>
+        
+        <header class="encabezado">
+
+            <div class="container">
+
+               <!-- <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
+                </div> -->
+                <div class="logo">
+                    <img src="/Imagenes/tigre-sura-removebg-preview.png" height="90px" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#">Inicio</a>
+                    <a href="/Index.html">Matricula</a>
+                    <a href="/Estado matricula.html">Estado matricula</a>
+                    <a href="#">Ayuda</a>
+                </nav>
+            </div><br><br>
+        <h1>Estado Matrícula</h1>
+        </header><br><br>
+
+        <section id="matricula">
+
+            <h2>Estado de Matrícula</h2>
+            <table border="1" class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Fecha de Inscripción</th>
+                            <td>Fecha fin</td>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaMatriculas">
+                        <tr>
+                            <td>Anatomía</td>
+                            <td>2025-10-12</td>
+                            <td>2026-01-31</td>
+                            <td>Aprobado</td>
+                        </tr>
+                        <tr>
+                            <td>Etica</td>
+                            <td>2025-09-18</td>
+                            <td>2025-12-15</td>
+                            <td>Aprobado</td>
+                        </tr>
+                        <tr>
+                            <td>Electronico</td>
+                            <td>2025-10-10</td>
+                            <td> -- </td>
+                            <td>Pendiente</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </section>
+
+        <script>
+                const matriculas = [];
+
+
+                function mostrarSeccion(id){
+                document.getElementById('formulario').style.display = 'none';
+                document.getElementById('matricula').style.display = 'none';
+                document.getElementById(id).style.display = 'block';
+                }
+
+
+                document.getElementById('formInscripcion').addEventListener('submit', function(e){
+                e.preventDefault();
+                const curso = document.getElementById('curso').value;
+
+
+                if(curso === 'Farmacología'){
+                document.getElementById('resultado').innerHTML = '<p>El curso seleccionado está lleno. Por favor elija otro.</p>';
+                return;
+                }
+
+
+                const fecha = new Date().toLocaleDateString();
+                const estado = 'pendiente';
+
+
+                matriculas.push({curso, fecha, estado});
+                mostrarMatriculas();
+                document.getElementById('resultado').innerHTML = `<p>Inscripción enviada para ${curso}. Estado inicial: <strong>${estado}</strong></p>`;
+                document.getElementById('formInscripcion').reset();
+                });
+
+
+                function mostrarMatriculas(){
+                const tabla = document.getElementById('tablaMatriculas');
+                tabla.innerHTML = '';
+                matriculas.forEach((m, index) => {
+                const fila = `<tr>
+                <td>${m.curso}</td>
+                <td>${m.fecha}</td>
+                <td id='estado-${index}'>${m.estado}</td>
+                <td><button onclick='cambiarEstado(${index})'>Cambiar Estado</button></td>
+                </tr>`;
+                tabla.innerHTML += fila;
+                });
+                }
+
+
+                function cambiarEstado(index){
+                const estados = ['pendiente', 'en proceso', 'aprobado', 'rechazado'];
+                const actual = matriculas[index].estado;
+                const siguiente = estados[(estados.indexOf(actual) + 1) % estados.length];
+                matriculas[index].estado = siguiente;
+                document.getElementById(`estado-${index}`).innerText = siguiente;
+                }
+            </script>
+
+    
+    </body>
+</html>

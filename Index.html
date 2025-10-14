@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Inscripción</title>
+        <link rel="stylesheet" href="/Style.css">
+        <link rel="stylesheet" href="/Navegacion.css">
+    </head>
+    <body>
+        <header class="encabezado">
+
+            <div class="container">
+
+               <!-- <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
+                </div> -->
+                <div class="logo">
+                    <img src="/Imagenes/tigre-sura-removebg-preview.png" height="90px" alt="">
+                </div>
+                <nav class="menu">
+                    <a href="#">Inicio</a>
+                    <a href="#">Matricula</a>
+                    <a href="/Estado matricula.html">Estado matricula</a>
+                    <a href="#">Ayuda</a>
+                </nav>
+            </div>
+             
+        </header><br><br>
+        
+        <br><br><h1 class="titulo">Sistema de Inscripción y Matrícula</h1><br><br>
+        <section id="formulario" class="seccion">
+            <h2>Formulario de Inscripción</h2>
+            <form id="formInscripcion" class="formulario">
+               <fieldset class="posicion">
+                    <legend>Datos personales</legend><br>
+                    <div class="posicion"> 
+                        <label>Nombre:</label><br>
+                        <input type="text" id="nombre" required class="posicion"><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Apellido:</label> <br>
+                        <input type="text" id="apellido" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Genero</label><br>
+                        <select id="Genero" required>
+                            <option value="">Seleccione...</option>
+                            <option value="">Masculino</option>
+                            <option value="">Femino</option>
+                            <option value="">No binario</option>
+                        </select><br><br>
+                    </div>
+                    <div class="posicion">
+                    
+                        <label>Nivel Acadamico</label><br>
+                        <select id="Nivel Acadamico" required>
+                            <option value="">Seleccione...</option>
+                            <option value="">Bachiller</option>
+                            <option value="">Tecnico</option>
+                            <option value="">Tecnologo</option>
+                            <option value="">Profesional</option>
+                        </select><br><br>
+                    </div>
+
+                    <div class="posicion">
+                        <label>Tipo de Documento:</label><br>
+                        <select id="tipoDocumento" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                        <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                        <option value="Cédula de extranjería">Cédula de extranjería</option>
+                        <option value="Permiso temporal">Permiso temporal</option>
+                        </select><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Número de identificación:</label><br>
+                        <input type="number" id="numeroId" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Fecha de Nacimiento:</label><br>
+                        <input type="date" id="numeroId" required><br><br>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de Residencia</legend><br>
+                    <div class="posicion">
+                        <label>Dirección de residencia:</label><br>
+                        <input type="text" id="direccion" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Estrato socioeconomico:</label><br>
+                        <select id="tipoDocumento" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Estrato 1">Estrato 1</option>
+                        <option value="Estrato 2">Estrato 2</option>
+                        <option value="Estrato 3">Estrato 3</option>
+                        <option value="Estrato 4">Estrato 4</option>
+                        <option value="Estrato 5">Estrato 5</option>
+                        <option value="Estrato 6">Estrato 6</option>
+                        </select><br><br>
+                    </div>
+
+                    <div class="posicion">
+                        <label>Municipio de residencia:</label><br>
+                        <input type="text" id="municipio" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Departamento de residencia:</label><br>
+                        <input type="text" id="departamento" required><br><br>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de contacto</legend><br>
+                    <div class="posicion">
+                        <label>Correo electrónico:</label><br>
+                        <input type="email" id="correo electronico" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Número de celular:</label><br>
+                        <input type="tel" id="celular" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Número de celular alterno:</label><br>
+                        <input type="tel" id="celular" required><br><br>
+                    </div>
+                    <div class="posicion">
+                        <label>Numero fijo</label><br>
+                        <input type="tel" id="Fijo" required><br><br>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Programas disponibles</legend><br>
+                    <label>Seleccione un curso o programa:</label><br>
+                    <select id="curso">
+                    <option value="Anatomía I">Anatomía I (40 Cupos disponibles)</option>
+                    <option value="Farmacología">Farmacología (Lleno)</option>
+                    <option value="Ética Profesional">Ética Profesional (12 Cupos disponibles)</option>
+                    <option value="Salud Comunitaria">Salud Comunitaria (13 Cupos disponibles)</option>
+                    </select><br><br>
+                </fieldset>
+                <button type="submit" class="boton">Enviar Formulario</button>
+            </form>
+    
+        </section>
+        
+
+
+
+    </body>
+</html>
