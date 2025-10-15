@@ -6,11 +6,12 @@
   font-family: "Montserrat Alternates", sans-serif;
 }
 body {
-  background-image: url("/Imagenes/joven-escribiendo-en-un-cuaderno-durante-la-sesion-de-estudio.jpg");
+  background-image: url("/Imagenes/joven-escribiendo-en-un-cuaderno-durante-la-sesion-de-estudio.jpg");*/
   background-attachment: fixed;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
+  opacity: 1;
 }
 .capa {
   position: fixed;
@@ -128,3 +129,4 @@ body {
   cursor: pointer;
   font-size: 18px;
 }
+

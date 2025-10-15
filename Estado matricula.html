@@ -29,40 +29,71 @@
         <h1>Estado Matrícula</h1>
         </header><br><br>
 
-        <section id="matricula">
+      
+            <section class="vertical_position_section">
 
-            <h2>Estado de Matrícula</h2>
-            <table border="1" class="tabla">
+              <h2>Informacion General de los cursos</h2> 
+
+             <h3> Max de alumnos permitidos por curso:  20 </h3>
+
+            <table border="1" class="tabla_cursos">
+
                     <thead>
+                    
+                    
+
+                    
+
+                    </thead>
+
+                    <tbody id="tabla_cursos">
+
+
                         <tr>
                             <th>Curso</th>
                             <th>Fecha de Inscripción</th>
                             <td>Fecha fin</td>
                             <th>Estado</th>
+                            <th>Colaborador</th>
+                            <th>CUPOS / #. Alum_Matriculados</th>
                         </tr>
-                    </thead>
-                    <tbody id="tablaMatriculas">
+
+
                         <tr>
                             <td>Anatomía</td>
                             <td>2025-10-12</td>
                             <td>2026-01-31</td>
                             <td>Aprobado</td>
+                            <td>Carlos pinto</td>
+                            <td>Cupos: 8 - Alumnos: 11</td>
                         </tr>
+
+                        
+
                         <tr>
                             <td>Etica</td>
                             <td>2025-09-18</td>
                             <td>2025-12-15</td>
                             <td>Aprobado</td>
+                            <td> Beatriz Cortez</td>
+                             <td>Cupo: 5 - Alumnos: 15</td>
                         </tr>
+
                         <tr>
                             <td>Electronico</td>
                             <td>2025-10-10</td>
                             <td> -- </td>
                             <td>Pendiente</td>
+                            <td>Abigail Trejos</td>
+                             <td>Cupo: 14 - Alumnos: 6</td>
                         </tr>
+
+                        
                     </tbody>
             </table>
-        </section>
+
+    </section>
+    
 
         <script>
                 const matriculas = [];

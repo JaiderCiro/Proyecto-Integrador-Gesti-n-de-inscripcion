@@ -1,6 +1,8 @@
  .encabezado {
     text-align:center; 
     margin-bottom:20px;
+    background-color: rgba(0, 0, 0, 0.274);
+    padding-bottom: 23px;
     
 }
 
@@ -9,16 +11,16 @@
     text-align:center;
 }
 
-.matriculas {
+.matricula {
      style="display:none; 
      text-align:center;
 }
 
 .tabla {
     cellpadding="5" 
-    cellspacing="0" 
-    margin:auto;
+    cellspacing="0"   
 }
+
 
 .formulario {
     display:flex;
@@ -46,3 +48,68 @@
     justify-content: center;
     align-items: center;
  }
+
+ .tabla_cursos  {
+
+    text-align: center;
+    
+
+
+
+    border: 2px solid black;
+  border-radius: 10px;
+
+    padding: 10px;
+    border: 2px solid rgba(108, 110, 97, 0.464);
+  margin: 20px;
+    background-color: rgba(184, 210, 210, 0.407);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+ }
+
+ .vertical_position_section {
+
+     position: relative;   /* o absolute, según el contexto */
+  top: 200px;            /* mueve la sección 50px hacia abajo */
+  right: 33px;
+ }
+
+ h2{
+
+    border-radius: 10px;
+padding: 10px;
+    background-color:rgba(255, 250, 205, 0.434);
+    margin: 10px;
+    border-bottom: 10px;
+    display: flex;
+    justify-content: center;
+ }
+
+ th {
+padding: 5px;
+}
+
+td {
+  padding: 5px;
+}
+
+h3{
+
+
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), -1px -2px 3px rgba(255, 250, 205, 0.434); 
+  
+  background-color: rgba(169, 169, 169, 0.413);
+    border-radius: 10px;
+padding: 10px;
+text-shadow: 
+    color: bisque;
+    margin: 10px;
+    border-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    
+  
+}
